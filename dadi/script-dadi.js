@@ -13,9 +13,9 @@ Fare il confronto per stabilire il vincitore e stampare il risultato
 // # STAGING
 
 // * Recupero gli elementi dal DOM
-const playerElement = document.getElementById("player");
-const cpuElement = document.getElementById("cpu");
-const winnerElement = document.getElementById("winner");
+const playerElement = document.getElementById('player');
+const cpuElement = document.getElementById('cpu');
+const winnerElement = document.getElementById('winner');
 
 //* Creare un array con i numeri di un dado
 
@@ -49,5 +49,8 @@ if (playerNumber === cpuNumber) {
 } else {
     message = (playerNumber > cpuNumber) ? "Hai vinto!" : "Hai perso.";
 }
+console.log(message);
 
-console.log(message)
+playerElement.innerText = `Il tuo numero: ${playerNumber}`;
+cpuElement.innerText = `Il mio numero: ${cpuNumber}`;
+winnerElement.innerHTML = message;
