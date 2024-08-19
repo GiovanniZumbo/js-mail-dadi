@@ -36,17 +36,24 @@ button.addEventListener('click', function () {
     const inputValue = input.value.trim();
 
     for (let i = 0; i < authMails.length; i++) {
+
         let mail = authMails[i];
 
         message = (inputValue === mail) ? "Accesso autorizzato" : "Accesso negato";
+
+        console.log(i + " " + message); // funzionamento del ciclo in console
+
+        if (authMails[i] === inputValue) {
+            break;
+        } // Mi permette di fermare il ciclo for 
+
     }
+
     console.table(authMails)
 
     resultElement.innerText = message;
 })
 
 // # PROCESSING
-
-
 
 // # OUTPUT 
