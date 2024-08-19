@@ -5,8 +5,8 @@ Recupero gli elementi dal DOM
 Creare un array con i numeri di un dado
 Assegnare un numero random al giocatore
 Assegnare un numero random alla CPU
-Fare il confronto per stabilire il vincitore
-Stampare in pagina
+Fare il confronto per stabilire il vincitore e stampare il risultato
+
 
 */
 
@@ -37,4 +37,17 @@ console.log('Player', playerNumber)
 const cpuNumber = randomNumbers[Math.floor(Math.random() * 6)];
 console.log('CPU', cpuNumber)
 
+
 // # OUTPUT 
+
+//* Fare il confronto per stabilire il vincitore e stampare il risultato
+
+let message = ' ';
+
+if (playerNumber === cpuNumber) {
+    message = 'C\'è stato un pareggio.'
+} else {
+    message = (playerNumber > cpuNumber) ? "Hai vinto!" : "Hai perso.";
+}
+
+console.log(message)
