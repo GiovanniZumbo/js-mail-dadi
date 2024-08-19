@@ -41,6 +41,8 @@ button.addEventListener('click', function () {
         message = (inputValue === mail) ? "Accesso autorizzato" : "Accesso negato";
     }
     console.table(authMails)
+
+    resultElement.innerText = message;
 })
 
 // # PROCESSING
@@ -48,5 +50,3 @@ button.addEventListener('click', function () {
 
 
 // # OUTPUT 
-
-resultElement.innerText = message;
