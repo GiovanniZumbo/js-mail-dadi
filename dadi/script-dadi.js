@@ -2,7 +2,7 @@
 
 /*
 Recupero gli elementi dal DOM
-Creare un array con i numeri dei dadi
+Creare un array con i numeri di un dado
 Assegnare un numero random al giocatore
 Assegnare un numero random alla CPU
 Fare il confronto per stabilire il vincitore
@@ -17,6 +17,9 @@ const playerElement = document.getElementById("player");
 const cpuElement = document.getElementById("cpu");
 const winnerElement = document.getElementById("winner");
 
+//* Creare un array con i numeri di un dado
+
+randomNumbers = [1, 2, 3, 4, 5, 6]
 
 // # DATA GATHERING
 
@@ -24,9 +27,14 @@ const winnerElement = document.getElementById("winner");
 
 // # PROCESSING
 
-// * Creare un array con i numeri dei dadi
+//* Assegnare un numero random al giocatore
 
-const numbers = [1, 2, 3, 4, 5, 6]
+const playerNumber = randomNumbers[Math.floor(Math.random() * 6)];
+console.log('Player', playerNumber)
 
+//* Assegnare un numero random alla CPU
+
+const cpuNumber = randomNumbers[Math.floor(Math.random() * 6)];
+console.log('CPU', cpuNumber)
 
 // # OUTPUT 
